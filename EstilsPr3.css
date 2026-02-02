@@ -1,0 +1,194 @@
+@font-face {
+    font-family: FontRace;
+    src: url(Fonts/race_sport/RaceSport.ttf);
+}
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 5px;
+    line-height: 1.5;
+    text-align: justify;
+}
+*::selection{
+    color: #95d5b2;
+    background-color: #2d6a4f;
+}
+body{
+    background-color:#d8f3dc;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+header{
+    border: solid 2px #023520;
+    border-radius: 15px;
+    background-color: #1b4332;
+    color: #b7e4c7;
+    padding-top: 15px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+
+}
+.Logo{
+    width: 80px;
+    height: 80px;
+    padding-bottom: 20px;
+}
+h1,h2,h4{
+    text-align: center;
+    line-height: 1;
+}
+h1{
+    font-family: FontRace;
+    line-height: 1;
+    font-size: 50px;
+}
+h2{font-family: FontRace;
+    font-size: 18px;    
+}
+h4{
+    color: #1b4332;
+    font-size: 10px;
+}
+ul,ol{
+    padding-left: 30px;
+}
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border: solid 2px #023520;
+    border-radius: 15px;
+    background-color: #081c15;
+    color: #95d5b2;
+    padding-top: 6px;
+    padding-bottom: 2px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+    cursor: pointer;
+    transition: 1.5s ease;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+}
+nav:hover{
+    background-color: #2d6a4f;
+}
+.anav{
+    font-family: FontRace;
+    font-size: 13px;
+}
+a:link, a:visited{
+    color: #95d5b2
+}
+a:active{
+    color:#062517;
+    transform: scale(0.9);
+    transition: 0.2s ease;
+}
+main{
+    border: solid 2px #023520;
+    border-radius: 15px;
+    background-color: #d4f1de;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+}
+article{
+    /*border: solid 1px red;*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-around;
+    align-items: flex-start;
+}
+.TextPresentacio{
+    /*border: solid 1px red;*/
+    margin: 3px;
+    padding: 1px;
+}
+.ContMinibox{
+    border: solid 2px #023520;
+    border-radius: 10px;
+    display: flex;
+    background-color:#b7e4c7;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
+    transition: all 1s ease;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+}
+.Minibox{
+    border: solid 2px #062517;
+    border-radius: 5px;
+    background-color: #2d6a4f;
+    color:#aed5bf;
+    gap: 5px;
+    padding: 5px;
+    font-size: 13px;
+    transition: all 1s ease;
+    max-width:21%;
+    min-width: 300px;
+    flex: 1;
+    cursor: context-menu;
+}
+.Minibox:hover{
+    border: 2px solid #023520;
+    background-color: #023520;
+    transform: scale(1.02);
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
+.imgbw{
+    filter: grayscale(100%);
+    width: 90%;
+    display:block;
+    margin: auto;
+}
+.Botonera{
+    border: solid 2px #023520;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+    gap: 7px;
+    justify-content:space-evenly;
+    align-items: flex-start;
+    transition: all 1s ease;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+}
+.Botonera:hover{
+    border: 2px solid #023520;
+    background-color: rgba(0,0,0,0.1);
+}
+button{
+    /*font-family: FontRace;*/
+    padding: 12px 24px;
+    background-color: #2d6a4f;
+    color: #95d5b2;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 1s ease;
+    cursor:pointer;
+    width: 30%;
+    min-width: 20%;
+    text-align: center;
+}
+button:hover{
+    background-color: #224e3c;
+    transform: scale(1.05);
+    box-shadow: 0 0px 0px rgba(0,0,0,0.1);
+}
+button:active{
+    background-color: #123627;
+    transform: scale(0.98);
+    transition: 0.2s ease;
+    border-radius: 10px;
+}
