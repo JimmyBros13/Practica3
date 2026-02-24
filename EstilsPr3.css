@@ -14,10 +14,47 @@
     background-color: #2d6a4f;
 }
 body{
-    background-color:#d8f3dc;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 5px;
+    z-index: 0;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+  
+body::after, body::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 110%;
+    background-image: conic-gradient(from var(--angle), #b7e4c7, #2d6a4f, #b7e4c7, #2d6a4f, #b7e4c7);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    animation: 10s spin linear infinite;
+}
+  body::before{
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+  @keyframes spin{
+    from{
+      --angle: 0deg;
+    }
+    to{
+      --angle: 360deg;
+    }
 }
 header{
     border: solid 2px #023520;
@@ -45,7 +82,7 @@ h1,h2,h4{
 h1{
     font-family: FontRace;
     line-height: 1;
-    font-size: 50px;
+    font-size: 300%;
 }
 h2{font-family: FontRace;
     font-size: 18px;    
@@ -110,6 +147,7 @@ article{
     padding: 1px;
 }
 .ContMinibox{
+    position: relative;
     border: solid 2px #023520;
     border-radius: 10px;
     display: flex;
@@ -134,18 +172,22 @@ article{
     padding: 5px;
     font-size: 13px;
     transition: all 1s ease;
+    position: relative;
     max-width:21%;
     min-width: 300px;
     flex: 1;
     cursor: context-menu;
+    z-index: 1;
 }
 .Minibox:hover{
     border: 2px solid #023520;
     background-color: #023520;
     transform: scale(1.02);
     box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 .imgbw{
+    border-radius: 10px;
     filter: grayscale(100%);
     width: 90%;
     display:block;
@@ -188,6 +230,10 @@ button:hover{
 }
 button:active{
     background-color: #123627;
+    transform: scale(0.98);
+    transition: 0.2s ease;
+    border-radius: 10px;
+}
     transform: scale(0.98);
     transition: 0.2s ease;
     border-radius: 10px;
